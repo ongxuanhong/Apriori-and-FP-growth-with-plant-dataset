@@ -6,10 +6,10 @@ plants_binary = "plants.csv"
 
 def load_stateabbr():
 	dict_state = {}
-	f = open(state_file, "r")
+	f = open(state_file)
 	for line in f:
 		state = line.strip().split(" ")[0]
-		dict_state[state] = "n"
+		dict_state[state] = "?"
 	
 	f.close()
 	return dict_state
@@ -22,7 +22,7 @@ def convert2binary():
 	# prepare write plants binary file
 	f_bin = open(plants_binary, "w")
 	# write header
-	header = "plant name"
+	header = "name"
 	for s in states:
 		header += "," + s
 
@@ -31,22 +31,22 @@ def convert2binary():
 	# read plants.data
 	f = open(plants_data, "r")
 	for line in f:
-		new_line = ""
 		plant = line.strip().split(",")
 		plant_name = plant[0]
-		new_line += plant_name
+		new_line = plant_name
 
 		# set bit 1 for states in current line
 		for i in range(1, len(plant)):
-			states[plant[i]] = "y"
+			if plant[i] in states:
+				states[plant[i]] = "y"
 
 		# write to plant binary file
 		for s in states:
 			new_line += "," + str(states[s])
 
 		# reset state value
-		states = states_origin.copy()
 		f_bin.write(new_line + "\n")
+		states = states_origin.copy()
 
 	f.close()
 	f_bin.close()
