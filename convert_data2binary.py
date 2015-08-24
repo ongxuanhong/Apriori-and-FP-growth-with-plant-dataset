@@ -9,7 +9,7 @@ def load_stateabbr():
 	f = open(state_file)
 	for line in f:
 		state = line.strip().split(" ")[0]
-		dict_state[state] = "?"
+		dict_state[state] = "n"
 	
 	f.close()
 	return dict_state
