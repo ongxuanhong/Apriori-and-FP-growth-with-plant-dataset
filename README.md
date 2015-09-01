@@ -3,6 +3,9 @@ In this experiment, I will apply Apriori and FP-Growth method for association ru
 
 Blog: https://ongxuanhong.wordpress.com/2015/08/24/apriori-va-fp-growth-voi-tap-du-lieu-plants/
 
+# Exploratory analysis
+![Exploratory analysis](https://ongxuanhong.files.wordpress.com/2015/08/load-plant-to-weka-e1440418238148.png)
+
 # Transform plants.data into binary format
 * Each row is a plant.
 * First column is Latin name (species or genus), the others are states distribution.
