@@ -1,5 +1,6 @@
 # Introduction
 In this experiment, I will apply Apriori and FP-Growth method for association rule mining.
+
 Blog: https://ongxuanhong.wordpress.com/2015/08/24/apriori-va-fp-growth-voi-tap-du-lieu-plants/
 
 # Transform plants.data into binary format
