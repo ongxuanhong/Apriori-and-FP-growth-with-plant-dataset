@@ -1,9 +1,11 @@
-# Chuyển dữ liệu trong tập tin plants.data từ dạng giao dịch sang dạng nhị phân
-* Mỗi dòng là một loài cây.
-* Cột đầu tiên là tên loài cây, các cột tiếp theo là các vùng phân bố.
-* Giá trị nhị phân gồm y và n. y đại diện cho sự xuất hiện của cây trong vùng phân bố và n
-là không xuất hiện.
-* Lưu lại theo định dạng csv với tên plants.csv
+# Introduction
+In this experiment, I will apply Apriori and FP-Growth method for association rule mining.
+
+# Transform plants.data into binary format
+* Each row is a plant.
+* First column is Latin name (species or genus), the others are states distribution.
+* Binary value (y/n). y means exist in this state, n means doesn't exist in this state.
+* Save data in csv format: plants.csv
 
 # Apriori results
 Generated sets of large itemsets:
